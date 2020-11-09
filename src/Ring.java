@@ -1,20 +1,24 @@
 public class Ring {
-    int zahl;
-    Ring nachfolger;
+    private int zahl;
+    private Ring nachfolger;
 
-    public void setNachfolger(Ring nachfolger) {
-        this.nachfolger = nachfolger;
+    Ring(int pN) {
+        zahl = pN;
     }
 
     public Ring getNachfolger() {
         return nachfolger;
     }
 
-    public void setZahl(int zahl) {
-        this.zahl = zahl;
+    public void setNachfolger(Ring nachfolger) {
+        this.nachfolger = nachfolger;
     }
 
     public int getZahl() {
         return zahl;
+    }
+
+    public void setZahl(int zahl) {
+        this.zahl = zahl;
     }
 }
