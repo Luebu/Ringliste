@@ -1,12 +1,21 @@
+import java.util.Scanner;
+
 public class Spiel {
     private Ring akt;
     private Ring first;
 
     public void erstellen(int pN) {
-        first = new Ring(1);
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Welches Alter soll die Person haben?");
+        first = new Ring(sc.nextInt());
+        System.out.println("Welchen Namen soll die Person haben?");
+        first.getPerson().setName(sc.next());
         akt = first;
         for (int i = 2; i <= pN; i++) {
-            akt.setNachfolger(new Ring(i));
+            System.out.println("Welches Alter soll die Person haben?");
+            akt.setNachfolger(new Ring(sc.nextInt()));
+            System.out.println("Welchen Namen soll die Person haben?");
+            akt.getPerson().setName(sc.next());
             akt = akt.getNachfolger();
         }
         akt.setNachfolger(first);
