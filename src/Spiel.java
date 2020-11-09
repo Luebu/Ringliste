@@ -15,7 +15,7 @@ public class Spiel {
 
     public int game(int pN) {
         Ring temp = akt;
-        while (akt.getNachfolger() != null) {
+        while (akt.getNachfolger() != akt) {
             for (int i = 0; i < pN; i++) {
                 akt = akt.getNachfolger();
             }
