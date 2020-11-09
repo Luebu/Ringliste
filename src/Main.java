@@ -13,6 +13,8 @@ public class Main {
 	    	return;
 		}
 	    System.out.println("Welche stelle?");
-	    System.out.println(g.game(s.nextInt()));
+	    Person p = g.game(s.nextInt());
+	    System.out.println("Das Alter der Person ist "+p.getAlter());
+	    System.out.println("Der Name der Person ist "+ p.getName());
     }
 }

@@ -14,15 +14,15 @@ public class Spiel {
         for (int i = 2; i <= pN; i++) {
             System.out.println("Welches Alter soll die Person haben?");
             akt.setNachfolger(new Ring(sc.nextInt()));
+            akt = akt.getNachfolger();
             System.out.println("Welchen Namen soll die Person haben?");
             akt.getPerson().setName(sc.next());
-            akt = akt.getNachfolger();
         }
         akt.setNachfolger(first);
         akt = akt.getNachfolger();
     }
 
-    public int game(int pN) {
+    public Person game(int pN) {
         Ring temp = akt;
         while (akt.getNachfolger() != akt) {
             for (int i = 0; i < pN; i++) {
@@ -35,6 +35,6 @@ public class Spiel {
             temp.setNachfolger(akt.getNachfolger());
             akt = temp;
         }
-        return akt.getPerson().getAlter();
+        return akt.getPerson();
     }
 }
