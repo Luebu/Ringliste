@@ -1,9 +1,10 @@
 public class Ring {
-    private int zahl;
+    private Person p;
     private Ring nachfolger;
 
     Ring(int pN) {
-        zahl = pN;
+        p = new Person();
+        p.setAlter(pN);
     }
 
     public Ring getNachfolger() {
@@ -14,11 +15,8 @@ public class Ring {
         this.nachfolger = nachfolger;
     }
 
-    public int getZahl() {
-        return zahl;
+    public Person getPerson() {
+        return p;
     }
 
-    public void setZahl(int zahl) {
-        this.zahl = zahl;
-    }
 }

@@ -26,6 +26,6 @@ public class Spiel {
             temp.setNachfolger(akt.getNachfolger());
             akt = temp;
         }
-        return akt.getZahl();
+        return akt.getPerson().getAlter();
     }
 }
