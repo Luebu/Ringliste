@@ -33,7 +33,7 @@ public class Spiel {
 
             }
             temp.setNachfolger(akt.getNachfolger());
-            akt = temp;
+            akt = temp.getNachfolger();
         }
         return akt.getPerson();
     }
